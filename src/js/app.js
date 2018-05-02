@@ -1,3 +1,1 @@
-import sayHello from './lib/sayHello.js';
-
-sayHello();
+import './import/parallax.js';

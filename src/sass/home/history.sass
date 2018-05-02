@@ -39,18 +39,29 @@
     display: flex
     align-items: flex-end
     height: 650px
+    &--none
+      +r(640)
+        display: none !important
+    &--mobile
+      display: none
+      +r(640)
+        display: block
     +r(640)
       display: block
-      height: auto
+      // max-height: 85%
+      column-count: 2
+      column-gap: 1em
   &__block
     width: 20%
     padding: 0 25px
     padding-bottom: 80px
     position: relative
     +r(640)
-      width: calc(50% - 5px)
+      width: 100%
       display: inline-block
-      padding-bottom: 80px
+      padding-bottom: 50px
+      display: inline-block
+      margin: 0 0 1em
     &:before
       content: ''
       position: absolute
@@ -83,6 +94,13 @@
       background-color: $white
       box-shadow: 0px 37px 101px 0 rgba(171, 166, 166, 0.29)
       padding-top: 35px
+      &--none
+        +r(640)
+          display: none
+      &--mobile
+        display: none
+        +r(640)
+          display: block
       +r(640)
         width: 100%
         height: auto
